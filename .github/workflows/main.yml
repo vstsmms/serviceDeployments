@@ -9,8 +9,11 @@ on:
       - main
 
 jobs:
-  test:
-    runs-on: self-hosted
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+    - name: Run a simple script
+      run: |
+        echo "Running on ${{ github.actor }}'s subdomain"
