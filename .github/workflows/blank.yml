@@ -10,4 +10,8 @@ on:
   pull_request:
     branches: [ "main" ]
 
-
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+    - run: echo Hello world!
